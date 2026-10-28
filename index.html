@@ -99,6 +99,20 @@ a{color:inherit}
 .gal figure:hover img{transform:scale(1.04)}
 .gal figcaption{margin-top:14px;color:var(--muted)}
 
+
+/* voices */
+.voices{padding-block:112px 40px}
+.voices .head{max-width:34em}
+.voices h2{font-weight:300;font-size:clamp(1.8rem,4vw,3rem);letter-spacing:.12em;text-transform:uppercase;margin-top:12px}
+.voices .head p{color:var(--muted);margin-top:18px}
+.vgrid{display:grid;grid-template-columns:repeat(2,minmax(0,360px));gap:48px;justify-content:center;margin-top:48px}
+.vcard{min-width:0}
+.vcard video{display:block;width:100%;aspect-ratio:9/16;background:#000;object-fit:cover}
+.vcard figcaption{margin-top:16px}
+.vcard figcaption b{display:block;font-weight:400;letter-spacing:.2em;text-transform:uppercase;font-size:.78rem;color:var(--gold)}
+.vcard figcaption span{color:var(--muted);display:block;margin-top:4px}
+@media (max-width:860px){.voices{padding-block:72px 24px}.vgrid{grid-template-columns:1fr;gap:40px;max-width:360px;margin-inline:auto}}
+
 /* origin */
 .origin{background:#5f4628;margin-inline:calc(-1*max(16px,env(safe-area-inset-left,0px)));padding-inline:max(16px,env(safe-area-inset-left,0px))}
 .origin .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:72px;padding-block:112px;align-items:start}
@@ -142,7 +156,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 
 <div class="wrap">
   <header class="top">
-    <nav class="caps" aria-label="Secciones"><a href="#detalles">Detalles</a><a href="#galeria">Galería</a><a href="#origen">Origen</a></nav>
+    <nav class="caps" aria-label="Secciones"><a href="#detalles">Detalles</a><a href="#galeria">Galería</a><a href="#voces">Voces</a><a href="#origen">Origen</a></nav>
     <a class="logo" href="#" aria-label="Tejiendo Senderos"><img src="img/logo-icon.png" alt="" width="388" height="504"><span>Tejiendo Senderos</span></a>
     <a class="r caps" href="#contacto">Contacto</a>
   </header>
@@ -208,6 +222,26 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
       <figure><div class="ph"><img src="img/frente.jpg" alt="Chaqueta de frente" loading="lazy"></div><figcaption class="caps">Frente</figcaption></figure>
       <figure><div class="ph"><img src="img/tres-cuartos.jpg" alt="Chaqueta de tres cuartos" loading="lazy"></div><figcaption class="caps">Tres cuartos</figcaption></figure>
       <figure><div class="ph"><img src="img/espalda.jpg" alt="Chaqueta por la espalda" loading="lazy"></div><figcaption class="caps">Espalda</figcaption></figure>
+    </div>
+  </section>
+</div>
+
+<div class="wrap">
+  <section class="voices" id="voces">
+    <div class="head">
+      <p class="caps gold">Voces</p>
+      <h2>Las manos detrás de la chaqueta</h2>
+      <p>Una artesana de la comunidad cuenta cómo teje, y la creadora del proyecto explica cómo confecciona la prenda.</p>
+    </div>
+    <div class="vgrid">
+      <figure class="vcard" style="margin:0">
+        <video controls playsinline preload="none" poster="video/artesana.jpg" aria-label="Video de una artesana de la comunidad de Lonya Chico"><source src="video/artesana.mp4" type="video/mp4"></video>
+        <figcaption><b>La artesana</b><span>Comunidad de Lonya Chico</span></figcaption>
+      </figure>
+      <figure class="vcard" style="margin:0">
+        <video controls playsinline preload="none" poster="video/creadora.jpg" aria-label="Video de Marcelina López, creadora del proyecto"><source src="video/creadora.mp4" type="video/mp4"></video>
+        <figcaption><b>Marcelina López</b><span>Creadora del proyecto y confeccionista de la chaqueta</span></figcaption>
+      </figure>
     </div>
   </section>
 </div>
